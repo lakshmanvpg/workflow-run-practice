@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Start Build
-        run: echo "Workflow A - Build started"
+        run: echo "Workflow A - Build started "
 
       - name: Build Application
         run: echo "Workflow A - Building application"
