@@ -1,0 +1,22 @@
+name: Workflow B
+
+on:
+  workflow_run:
+    workflows:
+      - "Workflow A"
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start Deployment
+        run: echo "Workflow B - Deployment started"
+
+      - name: Deploy Application
+        run: echo "Workflow B - Deploying application"
+
+      - name: Deployment Complete
+        run: echo "Workflow B - Deployment completed"
